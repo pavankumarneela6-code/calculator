@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calulator</title>
+</head>
+<style>
+    body{
+        background-color:rgb(43, 43, 59);
+    }
+    .box{
+        width:200px;
+        height:300px;
+        padding:20px;
+        margin:auto;
+        margin-top:20px;
+        border:1px solid white;
+        border-radius:10px;
+        box-shadow:0 0 15px  white;
+        
+    }
+    input{
+        width:100%;
+        height:40px;
+        margin-bottom:15px;
+        font-size:20px;
+        text-align:right;
+    }
+    .buttons{
+        display:grid;
+        grid-template-columns:repeat(4,1fr);
+        gap:15px;       
+    }
+    .buttons button{
+        height:35px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        border:1px solid pink;
+        cursor: pointer;
+        padding:10px;
+        box-shadow: 0 0 2px white;
+    }
+    .buttons button:hover {
+        transform: scale(1.15);
+        background:orange
+    }
+    .heading{
+        text-align: center;
+        font-size: 25px;
+        font-family: 'Trebuchet MS', sans-serif;
+        font-weight: bold;
+        letter-spacing: 6px;
+        text-transform: uppercase;
+        color: #ffffff;
+        text-shadow:
+            0 0 5px #00ffff,
+            0 0 10px #00ffff,
+            0 0 20px #0080ff,
+            0 0 35px #0080ff;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+</style>
+<body>
+    <h1 class="heading">CALCULATOR</h1>
+    <div class="box">
+        <input type="text" id="A" readonly placeholder="Enter ">
+        <div class="buttons">
+           <button onclick="clickAC()" style="color:rgb(58,22,219);">AC</button>
+            <button onclick="clickDel()" style="color:rgb(58,22,219);">Del</button>
+            <button onclick="clickPercent()" style="color:rgb(58,22,219);">%</button>
+            <button onclick="clickDivide()" style="color:rgb(58,22,219);">/</button>
+
+            <button onclick="clickSeven()">7</button>
+            <button onclick="clickEight()">8</button>
+            <button onclick="clickNine()">9</button>
+            <button onclick="clickMultiply()" style="color:rgb(58,22,219);">*</button>
+
+            <button onclick="clickFour()">4</button>
+            <button onclick="clickFive()">5</button>
+            <button onclick="clickSix()">6</button>
+            <button onclick="clickMinus()" style="color:rgb(58,22,219);">-</button>
+
+            <button onclick="clickOne()">1</button>
+            <button onclick="clickTwo()">2</button>
+            <button onclick="clickThree()">3</button>
+            <button onclick="clickPlus()" style="color:rgb(58,22,219);">+</button>
+
+            <button onclick="clickDoubleZero()">00</button>
+            <button onclick="clickZero()">0</button>
+            <button onclick="clickDot()">.</button>
+            <button onclick="clickEqual()" style="color:white; background-color:blue;">=</button>
+        </div>
+    </div>
+
+    <script>
+        function clickAC(){
+            document.getElementById("A").value= "";
+        }
+       function clickDel() {
+            let x = document.getElementById("A").value;
+            document.getElementById("A").value = x.slice(0, -1);
+        }
+        function clickPercent(){
+            document.getElementById("A").value +="%";
+        }
+        function clickDivide(){
+            document.getElementById("A").value +='/';
+        }
+        function clickSeven(){
+            document.getElementById("A").value +="7";
+        }
+        function clickEight(){
+            document.getElementById("A").value +="8";
+        }
+        function clickNine(){
+            document.getElementById("A").value +="9";
+        }
+        function clickMultiply(){
+            document.getElementById("A").value +="*";
+        }
+        function clickFour(){
+            document.getElementById("A").value +="4";
+        }
+        function clickFive(){
+            document.getElementById("A").value +="5";
+        }
+        function clickSix(){
+            document.getElementById("A").value +="6";
+        }
+        function clickMinus(){
+            document.getElementById("A").value +="-";
+        }
+        function clickOne(){
+            document.getElementById("A").value +="1";
+        }
+        function clickTwo(){
+            document.getElementById("A").value +="2";
+        }
+        function clickThree(){
+            document.getElementById("A").value +="3";
+        }
+        function clickPlus(){
+            document.getElementById("A").value +="+";
+        }
+        function clickDoubleZero(){
+            document.getElementById("A").value +="00";
+        }
+        function clickZero(){
+            document.getElementById("A").value +="0";
+        }
+        function clickDot(){
+            document.getElementById("A").value +=".";
+        }
+        function clickEqual(){
+            document.getElementById("A").value =eval(document.getElementById("A").value);
+        }
+    </script>
+</body>
+</html>
