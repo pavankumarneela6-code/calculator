@@ -66,7 +66,7 @@
 <body>
     <h1 class="heading">CALCULATOR</h1>
     <div class="box">
-        <input type="text" id="A"  placeholder="Enter ">
+        <input type="text" id="A" placeholder="Enter ">
         <div class="buttons">
            <button onclick="clickAC()" style="color:rgb(58,22,219);">AC</button>
             <button onclick="clickDel()" style="color:rgb(58,22,219);">Del</button>
@@ -96,75 +96,97 @@
     </div>
 
     <script>
+
         function clickAC(){
-            document.getElementById("A").value= "";
+            document.getElementById("A").value = "";
         }
-       function clickDel() {
+
+        function clickDel(){
             let x = document.getElementById("A");
-            if(x.value == "undefined"){
+
+            if(x.value === "undefined"){
                 return;
-            }   
-            x.value = x.value.slice(0, -1);
+            }
+
+            x.value = x.value.slice(0,-1);
         }
+
         function clickPercent(){
-            document.getElementById("A").value +="%";
+            document.getElementById("A").value += "%";
         }
+
         function clickDivide(){
-            document.getElementById("A").value +='/';
+            document.getElementById("A").value += "/";
         }
+
         function clickSeven(){
-            document.getElementById("A").value +="7";
+            document.getElementById("A").value += "7";
         }
+
         function clickEight(){
-            document.getElementById("A").value +="8";
+            document.getElementById("A").value += "8";
         }
+
         function clickNine(){
-            document.getElementById("A").value +="9";
+            document.getElementById("A").value += "9";
         }
+
         function clickMultiply(){
-            document.getElementById("A").value +="*";
+            document.getElementById("A").value += "*";
         }
+
         function clickFour(){
-            document.getElementById("A").value +="4";
+            document.getElementById("A").value += "4";
         }
+
         function clickFive(){
-            document.getElementById("A").value +="5";
+            document.getElementById("A").value += "5";
         }
+
         function clickSix(){
-            document.getElementById("A").value +="6";
+            document.getElementById("A").value += "6";
         }
+
         function clickMinus(){
-            document.getElementById("A").value +="-";
+            document.getElementById("A").value += "-";
         }
+
         function clickOne(){
-            document.getElementById("A").value +="1";
+            document.getElementById("A").value += "1";
         }
+
         function clickTwo(){
-            document.getElementById("A").value +="2";
+            document.getElementById("A").value += "2";
         }
+
         function clickThree(){
-            document.getElementById("A").value +="3";
+            document.getElementById("A").value += "3";
         }
+
         function clickPlus(){
-            document.getElementById("A").value +="+";
+            document.getElementById("A").value += "+";
         }
+
         function clickDoubleZero(){
-            document.getElementById("A").value +="00";
+            document.getElementById("A").value += "00";
         }
+
         function clickZero(){
-            document.getElementById("A").value +="0";
+            document.getElementById("A").value += "0";
         }
+
         function clickDot(){
-            document.getElementById("A").value +=".";
+            document.getElementById("A").value += ".";
         }
         function clickEqual(){
-            let i=document.getElementById("A");
+            let i = document.getElementById("A");
             try{
-                i.value=eval(i.value);
+                i.value = eval(i.value);
             }
             catch{
-                i.value="undefined";
-            }    
+                i.value = "undefined";
+            }
+
         }
     </script>
 </body>
