@@ -100,8 +100,11 @@
             document.getElementById("A").value= "";
         }
        function clickDel() {
-            let x = document.getElementById("A").value;
-            document.getElementById("A").value = x.slice(0, -1);
+            let x = document.getElementById("A");
+            if(x.value == "undefined"){
+                return;
+            }   
+            x.value = x.value.slice(0, -1);
         }
         function clickPercent(){
             document.getElementById("A").value +="%";
@@ -155,7 +158,13 @@
             document.getElementById("A").value +=".";
         }
         function clickEqual(){
-            document.getElementById("A").value =eval(document.getElementById("A").value);
+            let i=document.getElementById("A");
+            try{
+                i.value=eval(i.value);
+            }
+            catch{
+                i.value="undefined";
+            }    
         }
     </script>
 </body>
